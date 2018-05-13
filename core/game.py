@@ -29,25 +29,25 @@ class Game:
         self._shift_left() 
         self._merge_left()
         self._shift_left()
-        self.add_number(2, self.NUBERS)
+        self.add_number(1, self.NUBERS)
 
     def move_right(self):
         self._shift_right()
         self._merge_right()
         self._shift_right()        
-        self.add_number(2, self.NUBERS)
+        self.add_number(1, self.NUBERS)
 
     def move_up(self):
         self._shift_up()
         self._merge_up()
         self._shift_up() 
-        self.add_number(2, self.NUBERS)
+        self.add_number(1, self.NUBERS)
 
     def move_down(self):                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
         self._shift_down()
         self._merge_down()
         self._shift_down()
-        self.add_number(2, self.NUBERS)
+        self.add_number(1, self.NUBERS)
 
     def has_moves(self):
         return self._has_empty_cell() or self._has_merge_available()
@@ -63,7 +63,7 @@ class Game:
             for col in range(self.width - 1):
                 if self.field[row][col] == self.field[row][col + 1]:
                     return True
-                if row <= (self.width - 1):
+                if (row + 1) <= (self.width - 1):
                     if self.field[row][col] == self.field[row + 1][col]:
                         return True
         
